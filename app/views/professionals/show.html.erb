@@ -1,0 +1,6 @@
+<h2><%= @professional.username %></h2>
+<% @professional.services.each do |service| %>
+  <%= link_to service do %>
+    <%= service.name %>
+  <% end %><br>
+<% end %>
