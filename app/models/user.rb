@@ -1,4 +1,5 @@
-class Professional < ActiveRecord::Base
+class User < ActiveRecord::Base
+  
   validates   :username,
               presence: true, 
               format: { with: /\A[a-zA-Z0-9][a-zA-Z0-9_]*\z/ }
