@@ -19,6 +19,8 @@
 //= require bootstrap
 //= require_tree .
 
+
+//Carousel
 jQuery(function($) { 
 
   // settings
@@ -54,6 +56,10 @@ jQuery(function($) {
   );
 
 });
-=======
+
 //= require imageUpload
 //= require_tree .
+
+
+
+//Grid

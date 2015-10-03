@@ -19,7 +19,12 @@ div {
     display: block;
 }
 
-
+body {
+       margin: 0;
+       padding: 0;
+       background: #EEE;
+       font: 10px/13px 'Lucida Sans',sans-serif;
+}
 
 /* Header */ 
 .header-cont {
@@ -38,7 +43,7 @@ div {
     margin-left: -5px;
     padding: 0px;
     z-index: 10;
-    border-bottom: 2px ##F2F1F1 solid;
+    border-bottom: 2px white solid;
 }
 
 
@@ -57,11 +62,42 @@ div {
 
 }
 
+.userAvatarBig {
+    position: absolute;
+    top:30%;
+    left: 40%;
+    width:275px;
+}
+
 #main {
     border-top: 10px #494949 solid;
     padding: 0 5px;
 }
 
+#main {
+  background-image: url("http://lorempixel.com/output/abstract-q-c-1056-480-1.jpg");
+  border-top: 10px #494949 solid;
+  padding-top: 10px;
+  width:100%;
+  height: 550px;
+}
+
+#mainProf {
+  background: #EDEDED;
+  border-top: 10px #494949 solid;
+  padding-top: 10px;
+  width:100%;
+  height: 550px;
+}
+
+#username {
+    position: absolute;
+    top:75%;
+    color:#404040;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Carousel */ 
 .slider {
@@ -79,4 +115,48 @@ div {
   position: absolute; 
   top: 0; 
   left: 0; 
+}
+
+
+/* Grid */
+
+
+.wrap {
+  overflow: hidden;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-top:20px;
+}
+.box {
+  float: left;
+  position: relative;
+  width: 33.3%;
+  padding-bottom: 33.3%;
+}
+.boxInner {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  overflow: hidden;
+}
+.boxInner img {
+  width: 100%;
+}
+.boxInner .titleBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: -50px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }

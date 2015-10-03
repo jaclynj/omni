@@ -7,118 +7,97 @@
 
     <!--cant figure out how to link these to the right place for the life of me....-->
       <%= image_tag "logo.png", :class => "smallLogo" %>
+      <%= link_to "My Blog", controller: "users", action: "index" %>
       <%= image_tag @current_user.picture.storage_key, :class => "userAvatar" %>
+    </a> 
   </div>
-</div>
-
-
-<!-- Carousel 
-
-<div id="main">
-  
-  <ul class="slider">
-    <li>
-      <img src="http://lorempixel.com/output/abstract-q-c-1056-480-1.jpg" />
-    </li>
-    <li>
-      <img src="http://lorempixel.com/output/abstract-q-c-1056-480-8.jpg" />
-    </li>
-    <li>
-      <img src="http://lorempixel.com/output/abstract-q-c-1056-480-7.jpg" />
-    </li>
-    <li>
-      <img src="http://lorempixel.com/output/abstract-q-c-1056-480-6.jpg" />
-    </li>
-  </ul>
-
 </div>
 
 -->
 
-<!-- TEMP CAROUSEL HOLDER -->
-<div id="main">
-
+<!-- Prof Info -->
+<div id="mainProf">
+  <!--need to change this to backend after I reupload the imagine without the carat -->
+  <%= image_tag "avatar.png", :class => "userAvatarBig" %>
+  <p id="username">@stylestar</p>
 </div>
 
 
 
-<!-- Grid...make infinite after user prof implemented -->
+<!-- Grid...make infinite after user prof implemented if you have-->
 
 <div class="wrap">
     
     <!-- Define all of the tiles: -->
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/7.jpg" />
         <div class="titleBox">Butterfly</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-
-
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/1.jpg" />
         <div class="titleBox">An old greenhouse</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/2.jpg" />
         <div class="titleBox">Purple wildflowers</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/3.jpg" />
         <div class="titleBox">A birdfeeder</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/10.jpg" />
         <div class="titleBox">Crocus close-up</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/4.jpg" />
         <div class="titleBox">The garden shop</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/5.jpg" />
         <div class="titleBox">Spring daffodils</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/6.jpg" />
         <div class="titleBox">Iris along the path</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/8.jpg" />
         <div class="titleBox">The garden blueprint</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
-
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/9.jpg" />
         <div class="titleBox">The patio</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/11.jpg" />
         <div class="titleBox">Bumble bee collecting nectar</div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <%= image_tag "1435049682_kimberley-walsh-dyes-hair-pink.jpg", :class => "boxInner" %>
+        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/12.jpg" />
         <div class="titleBox">Winding garden path</div>
       </div>
     </div>
