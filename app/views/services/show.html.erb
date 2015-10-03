@@ -1,5 +1,10 @@
 <h2><%= @service.name %></h2>
+<%= image_tag( @service.picture.storage_key, width: "150" ) if @service.picture.present? %><br>
 <%= link_to @service.professional do %>
-  <%= image_tag( @service.picture.storage_key, width: "150" ) if @service.picture.present? %><br>
   by: <%= @service.professional.username %>
 <% end %>
+
+<%=link_to "<3", "",
+ class: "#{@current_user.actions.where(
+                      actionable_type: 'Service', actionable_id: @service.id
+          ).present? ? "saved" : "save"  }", id: "Service-#{@service.id}", action: "create" %>

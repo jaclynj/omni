@@ -14,4 +14,5 @@ class User < ActiveRecord::Base
               format: { with: /\A[a-zA-Z][a-zA-Z0-9\-\s']+\z/ }
 
   belongs_to :picture
+  has_many   :actions
 end
