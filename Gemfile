@@ -3,8 +3,13 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.13'
 
+ruby '2.2.2'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
+
+# Using amazon web services for asset storage and image upload
+gem 'aws-sdk', '~> 2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -36,6 +41,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'dotenv-rails'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

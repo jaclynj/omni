@@ -1,0 +1,16 @@
+<%= form_for(
+  @user, html: {  class: 'directUpload', data: 
+    { 
+      'form-data' => (@s3_direct_post.fields),
+      'url' => @s3_direct_post.url,
+      'host' => URI.parse(@s3_direct_post.url).host 
+    }
+ }) do |f| %>
+
+  <div class="field">
+    <%= f.label :picture_url %>
+    <%= f.file_field :picture_url %><br><br>
+    <%= f.submit "Update" %>
+  </div>
+
+<% end %>

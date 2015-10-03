@@ -1,4 +1,6 @@
 class Professional < ActiveRecord::Base
+  
+  include Pictureable
 
   validates   :username,
               presence: true,
@@ -12,4 +14,5 @@ class Professional < ActiveRecord::Base
               format: { with: /\A[a-zA-Z][a-zA-Z0-9\-\s']+\z/ }
 
   has_many :services
+  belongs_to :picture
 end

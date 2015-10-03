@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003011139) do
+ActiveRecord::Schema.define(version: 20151003174608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pictureable_pictures", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "picture_id"
+    t.integer  "picturable_id"
+    t.string   "picturable_type"
+  end
+
+  create_table "pictures", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "filename"
+    t.integer  "size",         limit: 8
+    t.string   "content_type"
+    t.string   "storage_key"
+    t.json     "metadata"
+  end
 
   create_table "professionals", force: true do |t|
     t.datetime "created_at"
@@ -26,6 +44,7 @@ ActiveRecord::Schema.define(version: 20151003011139) do
     t.string   "category"
     t.text     "description"
     t.string   "location"
+    t.integer  "picture_id"
   end
 
   create_table "services", force: true do |t|
@@ -37,6 +56,7 @@ ActiveRecord::Schema.define(version: 20151003011139) do
     t.text     "description"
     t.string   "state"
     t.integer  "professional_id"
+    t.integer  "picture_id"
   end
 
   create_table "users", force: true do |t|
@@ -48,6 +68,7 @@ ActiveRecord::Schema.define(version: 20151003011139) do
     t.integer  "points"
     t.text     "description"
     t.string   "location"
+    t.integer  "picture_id"
   end
 
 end

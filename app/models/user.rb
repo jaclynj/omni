@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   
+  include Pictureable
+
   validates   :username,
               presence: true,
               uniqueness: true, 
@@ -11,4 +13,5 @@ class User < ActiveRecord::Base
               allow_blank: true,
               format: { with: /\A[a-zA-Z][a-zA-Z0-9\-\s']+\z/ }
 
+  belongs_to :picture
 end

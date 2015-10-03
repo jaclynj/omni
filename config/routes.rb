@@ -4,8 +4,9 @@ Omni::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'services#index'
-  get 'services/:id', to: 'services#show', as: 'service'
+  get 'services/:id',       to: 'services#show', as: 'service'
   resources :professionals, only: [:index, :show]
+  resources :users,         only: [:index, :show, :edit, :update ]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

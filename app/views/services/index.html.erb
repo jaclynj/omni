@@ -39,11 +39,14 @@
 <!-- 
 <h1>Omni</h1>
 <% @services.each do |service| %>
-  --------------------------------------<br>
+  <br>
   <%= link_to service do %>
-    <%= service.name %>
+    <%= service.name %> <br>
   <% end %>
   
+  <%= image_tag( service.picture.storage_key ) if service.picture.present? %><br>
+
+
   by: <%= link_to service.professional do %>
     <%= service.professional.username %>
   <% end %>

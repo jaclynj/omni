@@ -1,4 +1,4 @@
-class ProfessionalsController < ActionController::Base
+class ProfessionalsController < ApplicationController
 
   def index
     @professionals = Professional.all
