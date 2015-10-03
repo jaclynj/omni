@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Professional.delete_all
+User.delete_all
+
 Professional.create( 
   [ 
     { 
@@ -22,5 +25,24 @@ Professional.create(
       category: "Fitness"
     }
   ]
-
+)
+Service.create(
+  [
+    {
+      name: "Beginner Yoga Class",
+      category: "fitness",
+      cost: 30.95,
+      description: "Easy to follow instruction and relaxing vibes.",
+      professional_id: Professional.find_by( username: "yogagurl87" ).id
+    }
+  ]
+)
+User.create( 
+  { 
+    username: "maxinepayne",
+    first_name: "Maxine",
+    last_name: "Payne",
+    location: "New York, NY",
+    points: 0
+  }
 )

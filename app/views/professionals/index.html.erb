@@ -1,4 +1,10 @@
+<h1>Professionals</h1>
 <% @professionals.each do |professional| %>
-  <%= professional.username %>
-  <%= professional.first_name %><br>
+  --------------------------------------<br>
+  username: <%= professional.username %><br>
+  first_name: <%= professional.first_name %>
+  <br><b>services:</b> <% professional.services.each do |service| %>
+    <li>service name: <%= service.name %> </li>
+  <%end%>
+  <br>
 <%end%>

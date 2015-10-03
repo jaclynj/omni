@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   
   validates   :username,
-              presence: true, 
+              presence: true,
+              uniqueness: true, 
               format: { with: /\A[a-zA-Z0-9][a-zA-Z0-9_]*\z/ }
   validates   :first_name,
               allow_blank: true,
