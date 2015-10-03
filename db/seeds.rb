@@ -50,13 +50,14 @@ Service.create(
       category: "beauty",
       cost: 25.00,
       description: "Classic and sexy short bob cut.",
-      professional_id: Professional.find_by( username: "coolcuts345" ).id
+      professional_id: Professional.find_by( username: "coolcuts345" ).id,
+      picture_id: Picture.create(
+        storage_key: "https://s3.amazonaws.com/omni-pictures/cute-inverted-bob-hairstyle-for-black-hair-12.jpg"
+      ).id
     }
   ]
 )
-Picture.create(
-  storage_key: "https://s3.amazonaws.com/omni-pictures/placeholderuseravatar.png"
-)
+
 User.create( 
   { 
     username: "maxinepayne",
@@ -64,7 +65,7 @@ User.create(
     last_name: "Payne",
     location: "New York, NY",
     points: 0,
-    picture_id: Picture.find_by( 
+    picture_id: Picture.create(
       storage_key: "https://s3.amazonaws.com/omni-pictures/placeholderuseravatar.png"
     ).id
   }

@@ -1,4 +1,5 @@
 <h2><%= @service.name %></h2>
-by: <%= link_to @service.professional do %>
-  <%= @service.professional.username %>
+<%= link_to @service.professional do %>
+  <%= image_tag( @service.picture.storage_key, width: "150" ) if @service.picture.present? %><br>
+  by: <%= @service.professional.username %>
 <% end %>
