@@ -8,6 +8,8 @@
 Professional.delete_all
 User.delete_all
 Service.delete_all
+Picture.delete_all
+PictureablePicture.delete_all
 
 Professional.create( 
   [ 
@@ -52,12 +54,18 @@ Service.create(
     }
   ]
 )
+Picture.create(
+  storage_key: "https://s3.amazonaws.com/omni-pictures/placeholderuseravatar.png"
+)
 User.create( 
   { 
     username: "maxinepayne",
     first_name: "Maxine",
     last_name: "Payne",
     location: "New York, NY",
-    points: 0
+    points: 0,
+    picture_id: Picture.find_by( 
+      storage_key: "https://s3.amazonaws.com/omni-pictures/placeholderuseravatar.png"
+    ).id
   }
 )

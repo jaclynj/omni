@@ -1,4 +1,3 @@
-console.log( "file loaded ");
 
 $(function() {
   $('.directUpload').find("input:file").each(function(i, elem) {
@@ -49,7 +48,6 @@ $(function() {
         form.append(input);
       },
       fail: function(e, data) {
-        console.log("in fail function");
         submitButton.prop('disabled', false);
 
         progressBar.

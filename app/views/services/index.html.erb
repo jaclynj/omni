@@ -8,7 +8,7 @@
       <%= image_tag "logo.png", :class => "smallLogo" %>
     </a> 
     <a href = "index.html.erb"> 
-      <%= image_tag "placeholderuseravatar.png", :class => "userAvatar" %>
+      <%= image_tag @current_user.picture.storage_key, :class => "userAvatar" %>
     </a> 
   </div>
 </div>
