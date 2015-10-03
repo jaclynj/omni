@@ -4,7 +4,7 @@ class ProfessionalsController < ActionController::Base
     @professionals = Professional.all
   end
 
-  def read
+  def show
     @professional = Professional.find( params[:id] )
   end
 end

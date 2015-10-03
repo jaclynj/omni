@@ -1,6 +1,6 @@
 class UsersController < ActionController::Base
 
-  def read
+  def show
     @user = User.find( params[:id] )
   end
 

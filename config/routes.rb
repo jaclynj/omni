@@ -3,8 +3,9 @@ Omni::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'professionals#index'
-  get 'professionals/:id' => 'professionals#read'
+  root 'services#index'
+  get 'services/:id' => 'services#show'
+  resources :professionals, only: [:index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

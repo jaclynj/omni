@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Professional.delete_all
 User.delete_all
+Service.delete_all
 
 Professional.create( 
   [ 
@@ -34,6 +35,20 @@ Service.create(
       cost: 30.95,
       description: "Easy to follow instruction and relaxing vibes.",
       professional_id: Professional.find_by( username: "yogagurl87" ).id
+    },
+    {
+      name: "Advanced Yoga Class",
+      category: "fitness",
+      cost: 42.95,
+      description: "More instruction and relaxing vibes.",
+      professional_id: Professional.find_by( username: "yogagurl87" ).id
+    },
+    {
+      name: "Bob Haircut",
+      category: "beauty",
+      cost: 25.00,
+      description: "Classic and sexy short bob cut.",
+      professional_id: Professional.find_by( username: "coolcuts345" ).id
     }
   ]
 )

@@ -1,0 +1,9 @@
+<h1>Omni</h1>
+<% @services.each do |service| %>
+  --------------------------------------<br>
+  service name: <%= service.name %>
+  by: <%= link_to service.professional do %>
+    <%= service.professional.username %>
+  <% end %>
+
+<%end%>
