@@ -7,6 +7,7 @@ Omni::Application.routes.draw do
   get 'services/:id',       to: 'services#show', as: 'service'
   resources :professionals, only: [:index, :show]
   resources :users,         only: [:index, :show, :edit, :update ]
+  post 'actions',           to: 'actions#toggle_save', as: 'actions'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

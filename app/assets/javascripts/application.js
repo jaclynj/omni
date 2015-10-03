@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.ui.widget
 //= require z.jquery.fileupload
+//= require actions
 //= require turbolinks
 //= require bootstrap
 //= require_tree .

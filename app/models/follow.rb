@@ -1,0 +1,4 @@
+class Follow < Action 
+
+
+end

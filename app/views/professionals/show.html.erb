@@ -1,6 +1,17 @@
 <h2><%= @professional.username %></h2>
+<!-- Follow logic -->
+<%=link_to "<3", "",
+ class: "#{@current_user.actions.where(
+                      actionable_type: 'Professional', actionable_id: @professional.id
+          ).present? ? "followed" : "follow"  }", id: "Professional-#{@professional.id}",
+          action: "create" %><br><br>
+
 <% @professional.services.each do |service| %>
   <%= link_to service do %>
     <%= service.name %>
-  <% end %><br>
+    <%=link_to "<3", "",
+       class: "#{@current_user.actions.where(
+                            actionable_type: 'Service', actionable_id: service.id
+                ).present? ? "saved" : "save"  }", id: "Service-#{service.id}", action: "create" %>
+        <% end %><br>
 <% end %>
