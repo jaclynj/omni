@@ -9,5 +9,74 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap.min
  *= require_tree .
  */
+ *= require bootstrap
+
+
+div {
+    display: block;
+}
+
+
+
+/* Header */ 
+.header-cont {
+    width: 101%;
+    position:fixed;
+    top:0px;
+    z-index: 10;
+    margin: -5px;
+    padding: 0px;
+}
+
+.header {
+    height:120px;
+    background: #F2F1F1; 
+    width: 101%;
+    margin-left: -5px;
+    padding: 0px;
+    z-index: 10;
+    border-bottom: 2px ##F2F1F1 solid;
+}
+
+
+.smallLogo{
+    position: absolute;
+    top:30%;
+    left: 5%;
+    width:170px;
+}
+
+.userAvatar {
+    position: absolute;
+    top:25%;
+    left: 87%;
+    width:100px;
+
+}
+
+#main {
+    border-top: 10px #494949 solid;
+    padding: 0 5px;
+}
+
+
+/* Carousel */ 
+.slider {
+  margin: 1px 0;
+  /*width: 200%; */
+  height: 600px; /* Update to your slider height */
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slider li {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
