@@ -25,6 +25,10 @@ body {
        background: #EEE;
        font: 10px/13px 'Lucida Sans',sans-serif;
 }
+hr {
+  width: 65%;
+
+}
 
 /* Header */ 
 .header-cont {
@@ -166,4 +170,32 @@ body {
 body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
   margin-bottom: 0;
 }
-    
+
+
+.box #overlay {
+  background: rgba(0,0,0,.75);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  padding: 0;
+  transition: opacity .5s;
+}
+
+#textdiv {
+  top: 10px;
+}
+
+.box #overlay p {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'arial';
+  text-align: center;
+  line-height: auto;
+}
+.box:hover #overlay {
+  opacity: .9;
+  transition: opacity .5s;
+}
