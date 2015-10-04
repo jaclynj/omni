@@ -179,21 +179,23 @@ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleB
   opacity: 0;
   top: 10px;
   left: 10px;
-  position: absolute;
+  position: relative;
   padding: 0;
   transition: opacity .5s;
 }
 
-#textdiv {
-  top: 10px;
-}
 
+#textdiv {
+  padding-top: 115px;
+
+
+
+}
 .box #overlay p {
   color: #fff;
   font-size: 20px;
   font-family: 'arial';
   text-align: center;
-  line-height: auto;
 }
 .box:hover #overlay {
   opacity: .9;
