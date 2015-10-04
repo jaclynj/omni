@@ -7,7 +7,9 @@
 
     <!--cant figure out how to link these to the right place for the life of me....-->
       <%= image_tag "logo.png", :class => "smallLogo" %>
-      <%= image_tag @current_user.picture.storage_key, :class => "userAvatar" %>
+      <% if @current_user.present? %>
+        <%= image_tag @current_user.picture.storage_key, :class => "userAvatar" %>
+      <% end %>
   </div>
 </div>
 
