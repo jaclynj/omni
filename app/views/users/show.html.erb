@@ -2,18 +2,6 @@
 <%= javascript_include_tag "application" %>
 
 
-<div class="header-cont">
-	<div class = "header"> 
-    <a href = "index.html.erb"> 
-      <%= image_tag "logo.png", :class => "smallLogo" %>
-    </a> 
-    <a href = "index.html.erb"> 
-      <%= image_tag @current_user.picture.storage_key, :class => "userAvatar" %>
-    </a> 
-  </div>
-</div>
-
-
 <!-- Carousel 
 
 <div id="main">
@@ -120,23 +108,3 @@
     
   </div>
 
-
-
-<!-- 
-<h1>Omni</h1>
-<% @services.each do |service| %>
-  <br>
-  <%= link_to service do %>
-    <%= service.name %> <br>
-  <% end %>
-  
-  <%= image_tag( service.picture.storage_key ) if service.picture.present? %><br>
-
-
-  by: <%= link_to service.professional do %>
-    <%= service.professional.username %>
-  <% end %>
-
-<%end%> 
-
- -->

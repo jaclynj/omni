@@ -36,38 +36,49 @@ Professional.create(
       ).id
     },
     { 
-      username: "yogagurl",
+      username: "SugarAndSpice",
       first_name: "Jane",
       last_name: "Brown",
-      company_name: "Peace of Mind",
-      description: "I offer hands-on expert instruction to bring you mental peace and physical fitness and flexibility",
-      category: "Fitness",
+      company_name: "Rita's Trendy Cuts",
+      description: "I specialize in coloring, alternative hairstyles",
+      category: "Beauty",
       picture_id: Picture.create(
-        storage_key: "https://s3.amazonaws.com/omni-pictures/yoga_profile.jpg"
+        storage_key: "https://s3.amazonaws.com/omni-pictures/Thursday-Tresses10.jpg"
       ).id
     }
   ]
 )
 Service.create(
+  
   [
     {
-      name: "Beginner Yoga Class",
-      category: "fitness",
-      cost: 30.95,
-      description: "Easy to follow instruction and relaxing vibes.",
-      professional_id: Professional.find_by( username: "yogagurl" ).id,
+      name: "Brown/Blonde Ombre Coloring",
+      category: "beauty",
+      cost: 26.00,
+      description: "Professional ombre coloring",
+      professional_id: Professional.find_by( username: "SugarAndSpice" ).id,
       picture_id: Picture.create(
-        storage_key: "https://s3.amazonaws.com/omni-pictures/yoga1.jpg"
+        storage_key: "https://s3.amazonaws.com/omni-pictures/images-8.jpeg"
       ).id
     },
     {
-      name: "Advanced Yoga Class",
-      category: "fitness",
-      cost: 42.95,
-      description: "More instruction and relaxing vibes.",
-      professional_id: Professional.find_by( username: "yogagurl" ).id,
+      name: "Feminine Fauxhawk",
+      category: "beauty",
+      cost: 22.80,
+      description: "Short Fauxhawk cut",
+      professional_id: Professional.find_by( username: "SugarAndSpice" ).id,
       picture_id: Picture.create(
-        storage_key: "https://s3.amazonaws.com/omni-pictures/yoga2.jpeg"
+        storage_key: "https://s3.amazonaws.com/omni-pictures/images-7.jpeg"
+      ).id
+    },
+    {
+      name: "Lilac Coloring",
+      category: "beauty",
+      cost: 26.00,
+      description: "This beautiful lilac coloring is perfect for the wild femme in you",
+      professional_id: Professional.find_by( username: "SugarAndSpice" ).id,
+      picture_id: Picture.create(
+        storage_key: "https://s3.amazonaws.com/omni-pictures/celebrity-hair-hairstylist-instagram.jpg"
       ).id
     },
     {
@@ -81,13 +92,13 @@ Service.create(
       ).id
     },
     {
-      name: "Coloring: Pastel Pink",
+      name: "Light Gray coloring",
       category: "beauty",
       cost: 30.00,
-      description: "Professional and delicate pink coloring.",
+      description: "Professional and delicate light gray/white coloring.",
       professional_id: Professional.find_by( username: "zoe501" ).id,
       picture_id: Picture.create(
-        storage_key: "https://s3.amazonaws.com/omni-pictures/1435049682_kimberley-walsh-dyes-hair-pink.jpg"
+        storage_key: "https://s3.amazonaws.com/omni-pictures/images.jpeg"
       ).id
     },
     {
@@ -121,6 +132,16 @@ Service.create(
       ).id
     },
     {
+      name: "Coral Pink Hair Coloring",
+      category: "beauty",
+      cost: 26.00,
+      description: "Express yourself with this beautiful coral pink coloring",
+      professional_id: Professional.find_by( username: "SugarAndSpice" ).id,
+      picture_id: Picture.create(
+        storage_key: "https://s3.amazonaws.com/omni-pictures/1435049682_kimberley-walsh-dyes-hair-pink.jpg"
+      ).id
+    },
+    {
       name: "Hair cut and styling (curly)",
       category: "beauty",
       cost: 22.00,
@@ -138,6 +159,16 @@ Service.create(
       professional_id: Professional.find_by( username: "TrendyCuts" ).id,
       picture_id: Picture.create(
         storage_key: "https://s3.amazonaws.com/omni-pictures/images-12.jpeg"
+      ).id
+    },
+    {
+      name: "Styling Curly hair",
+      category: "beauty",
+      cost: 21.00,
+      description: "Come to us for beautiful and healthy curly hair styles.",
+      professional_id: Professional.find_by( username: "TrendyCuts" ).id,
+      picture_id: Picture.create(
+        storage_key: "https://s3.amazonaws.com/omni-pictures/11201651_1636692979898366_583303966_n-1.jpg"
       ).id
     }
   ]

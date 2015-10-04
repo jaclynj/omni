@@ -7,6 +7,18 @@
 </head>
 <body>
 
+<div class="header-cont">
+  <div class = "header"> 
+
+      <%= link_to image_tag("logo.png", :class => "smallLogo"), root_path  %>
+      <% if @current_user.present? %>
+          <%= link_to image_tag( 
+            @current_user.picture.storage_key, :class => "userAvatar" ),
+            @current_user %>
+      <% end %>
+  </div>
+</div>
+
 <%= yield %>
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
