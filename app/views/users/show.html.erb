@@ -2,109 +2,101 @@
 <%= javascript_include_tag "application" %>
 
 
-<!-- Carousel 
+<!-- Prof Info -->
 
-<div id="main">
-  
-  <ul class="slider">
-    <li>
-      <img src="http://lorempixel.com/output/abstract-q-c-1056-480-1.jpg" />
-    </li>
-    <li>
-      <img src="http://lorempixel.com/output/abstract-q-c-1056-480-8.jpg" />
-    </li>
-    <li>
-      <img src="http://lorempixel.com/output/abstract-q-c-1056-480-7.jpg" />
-    </li>
-    <li>
-      <img src="http://lorempixel.com/output/abstract-q-c-1056-480-6.jpg" />
-    </li>
-  </ul>
-
+<div class= "col-md-4 mainProf">
+  <p class="headerText"><%= @current_user.location %> </br></br>
+  <%= @current_user.description %> </p>
 </div>
 
--->
+<div class= "col-md-4 mainProf">
+  <%= image_tag @current_user.picture.storage_key, :id => "userAvatarBig" %>
+  <p id="username"><%=@current_user.first_name%> <%=@current_user.last_name%></p>
+  <p class="userIdentifier">@<%=@current_user.username%></p>
+</div>
+
+  <div class= "col-md-4 mainProf">
+    <p class="headerText followingNumber"><%= @current_user.actions.count %> <br><br></p>
+      <div class="followingText">Following</div>
+
+  </div>
 
 
 
+<!-- Grid...make infinite after user prof implemented if you have-->
 
-<!-- Grid...make infinite after user prof implemented -->
-
-<div class="wrap">
+<div class="wrap full">
     
     <!-- Define all of the tiles: -->
+
     <div class="box">
       <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/7.jpg" />
-        <div class="titleBox">Butterfly</div>
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+            <div id="textdiv"><p> Look Name </p><hr><p> $75 </p></div>
+        </div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/1.jpg" />
-        <div class="titleBox">An old greenhouse</div>
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+
+        </div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/2.jpg" />
-        <div class="titleBox">Purple wildflowers</div>
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+
+        </div>
+      </div>
+    </div>
+     <div class="box">
+      <div class="boxInner">
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+
+        </div>
+      </div>
+    </div>   
+    <div class="box">
+      <div class="boxInner">
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+
+        </div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/3.jpg" />
-        <div class="titleBox">A birdfeeder</div>
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+
+        </div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/10.jpg" />
-        <div class="titleBox">Crocus close-up</div>
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+        </div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/4.jpg" />
-        <div class="titleBox">The garden shop</div>
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+        </div>
       </div>
     </div>
     <div class="box">
       <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/5.jpg" />
-        <div class="titleBox">Spring daffodils</div>
+        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
+          <div id="overlay">
+        </div>
       </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/6.jpg" />
-        <div class="titleBox">Iris along the path</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/8.jpg" />
-        <div class="titleBox">The garden blueprint</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/9.jpg" />
-        <div class="titleBox">The patio</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/11.jpg" />
-        <div class="titleBox">Bumble bee collecting nectar</div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <img src="http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/images/demo/12.jpg" />
-        <div class="titleBox">Winding garden path</div>
-      </div>
-    </div>
-    
-  </div>
+    </div>            
+</div>
 

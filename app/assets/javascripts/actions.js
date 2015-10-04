@@ -60,6 +60,9 @@ $('.follow').click(function (save_event) {
 
         }
     });
+   setTimeout(function() { //TODO remove this HACK
+      document.location.reload(true);
+    }, 1);
     return false;
 });
 $('.followed').click(function (save_event) {
@@ -79,5 +82,8 @@ $('.followed').click(function (save_event) {
           console.log("success", json);
         }
     });
+    setTimeout(function() { //TODO remove this HACK
+      document.location.reload(true);
+    }, 1);
     return false;
 });

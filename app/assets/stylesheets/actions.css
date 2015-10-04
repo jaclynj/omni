@@ -1,3 +1,6 @@
-.saved,.followed {
-  color: red;
+.saved,.followed, .follow, .save {
+  top: 70%;
+  position: absolute;
+  margin: 0 auto;
+  left: 28%;
 }

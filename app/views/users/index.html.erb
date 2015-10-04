@@ -2,31 +2,31 @@
 <%= javascript_include_tag "application" %>
 
 
-<div class="header-cont">
-	<div class = "header"> 
-
-    <!--cant figure out how to link these to the right place for the life of me....-->
-      <%= image_tag "logo.png", :class => "smallLogo" %>
-      <%= link_to "My Blog", controller: "users", action: "index" %>
-      <%= image_tag @current_user.picture.storage_key, :class => "userAvatar" %>
-    </a> 
-  </div>
-</div>
-
--->
-
 <!-- Prof Info -->
-<div id="mainProf">
-  <!--need to change this to backend after I reupload the imagine without the carat -->
-  <%= image_tag "avatar.png", :class => "userAvatarBig" %>
-  <p id="username">@stylestar</p>
+
+<div class= "col-md-4 mainProf">
+  <p class="headerText"><%= @current_user.location %> </br></br>
+  <%= @current_user.description %> </p>
 </div>
+
+<div class= "col-md-4 mainProf">
+  <!--need to change this to backend after I reupload the imagine without the carat -->
+  <%= image_tag @current_user.picture.storage_key, :id => "userAvatarBig" %>
+  <p id="username"><%=@current_user.first_name%> <%=@current_user.last_name%></p>
+  <p class="userIdentifier">@<%=@current_user.username%></p>
+</div>
+
+  <div class= "col-md-4 mainProf">
+    <p class="headerText followingNumber"><%= @current_user.actions.count %> <br><br></p>
+      <div class="followingText">Following</div>
+
+  </div>
 
 
 
 <!-- Grid...make infinite after user prof implemented if you have-->
 
-<div class="wrap">
+<div class="wrap full">
     
     <!-- Define all of the tiles: -->
 

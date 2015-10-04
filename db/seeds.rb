@@ -31,7 +31,7 @@ Professional.create(
       company_name: "Rita's Trendy Cuts",
       description: "You are in great hands at Rita's. I've been owning my own salon business for over 10 years and take pride in my craft.",
       category: "Beauty",
-      picture_id: Picture.create(
+      picture_id: Picture.find_or_create_by(
         storage_key: "https://s3.amazonaws.com/omni-pictures/2f3bd2b51263f08e920d9cb7fd8ff4fe.jpg"
       ).id
     },
@@ -176,13 +176,14 @@ Service.create(
 
 User.create( 
   { 
-    username: "maxinepayne",
+    username: "stylestar",
     first_name: "Maxine",
     last_name: "Payne",
     location: "New York, NY",
+    description: "I love changing my hair and looking for new styles.",
     points: 0,
     picture_id: Picture.create(
-      storage_key: "https://s3.amazonaws.com/omni-pictures/placeholderuseravatar.png"
+      storage_key: "https://s3.amazonaws.com/omni-pictures/avatar.png"
     ).id
   }
 )
