@@ -32,6 +32,8 @@ gem 'turbolinks'
 # install bootstrap
 gem 'bootstrap-sass'
 
+# install stripe for payments
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

@@ -9,6 +9,8 @@ Omni::Application.routes.draw do
   resources :users,         only: [:index, :show, :edit, :update ]
   post 'actions',           to: 'actions#toggle_save', as: 'actions'
 
+  post 'purchases',         to: 'purchases#create', as: 'purchases'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

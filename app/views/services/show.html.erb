@@ -8,3 +8,5 @@
  class: "#{@current_user.actions.where(
                       actionable_type: 'Service', actionable_id: @service.id
           ).present? ? "saved" : "save"  }", id: "Service-#{@service.id}", action: "create" %>
+
+<%= render partial: "purchases/new",  locals: {purchaseable: @service } %>
