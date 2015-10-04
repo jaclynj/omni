@@ -44,7 +44,7 @@
         ), :class => "boxInner" %>
           <div id="overlay">
             <div id="textdiv"><p> <%=service.name%> </p><hr><p> $<%= service.cost.round(2) %> </p></div>
-            <%= render partial: "purchases/new",  locals: {purchaseable: service } %>
+            <div class="purchaseable"><%= render partial: "purchases/new",  locals: {purchaseable: service } %></div>
         </div>
       </div>
     </div>

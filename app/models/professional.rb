@@ -15,4 +15,8 @@ class Professional < ActiveRecord::Base
 
   has_many :services
   belongs_to :picture
+
+  def name
+    "#{self.first_name} #{self.last_name}"
+  end
 end

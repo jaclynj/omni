@@ -2,5 +2,12 @@
   top: 70%;
   position: absolute;
   margin: 0 auto;
-  left: 28%;
+  left: 23%;
+}
+
+.purchaseable {
+  top: 70%;
+  position: absolute;
+  margin: 0 auto;
+  left: 37%;
 }

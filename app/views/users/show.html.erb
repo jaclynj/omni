@@ -28,75 +28,23 @@
 <div class="wrap full">
     
     <!-- Define all of the tiles: -->
+  <% @current_user.actions.each do |action| %>
+    <div class="box">
+      <div class="boxInner" >
+        <%= image_tag ( 
+          action.actionable.picture ? action.actionable.picture.storage_key : "tumblr_nf0pdmqriX1rwb4yto1_500.jpg" 
+        ), :class => "boxInner" %>
+        <div id="overlay">
+          <div id="textdiv"><p>  <%=action.actionable.name %> </p><hr>
+            <p> <%= action.actionable.cost.round(2) if action.actionable.respond_to?(:cost)%> </p>
+          </div>
+          <% if action.actionable.respond_to?(:cost) %>
+          <div class="purchaseable"><%= render partial: "purchases/new",  locals: {purchaseable: action.actionable } %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <%end%>
 
-    <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-            <div id="textdiv"><p> Look Name </p><hr><p> $75 </p></div>
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-
-        </div>
-      </div>
-    </div>
-     <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-
-        </div>
-      </div>
-    </div>   
-    <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="boxInner">
-        <%= image_tag "tumblr_nf0pdmqriX1rwb4yto1_500.jpg", :class => "boxInner" %>
-          <div id="overlay">
-        </div>
-      </div>
-    </div>            
 </div>
 
